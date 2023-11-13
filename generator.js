@@ -13,36 +13,37 @@ var pitches = [
     "G#/Ab",
 ]
 
-function generateWholeToneScale(rootNote) {
-    let index = pitches.indexOf(rootNote);
-
-    //const pattern = [0, 2, 4, 6, 8];
-
-   for (let i = 0; i < 6; i++) {
-        console.log(pitches[index]);
-        index = index + 2;
-        if(index >= 12 ) index =0;
-   }
-
+const Scales = {
+    WHOLETONE: [0, 2, 4, 6, 8, 10, 12], //whole step
+    MAJORTRIAD: [0, 4, 7], //root, major third and perfect fifth.
+    MINORTRIAD: [0, 3, 7], //root, a minor third and a perfect fifth
 }
 
-//generateWholeToneScale("F");
-
-function generateMajorTriad(rootNote){
-    let index = pitches.indexOf(rootNote);
-
-    const pattern = [0, 4, 7];
-
-    for (i = 0; i < pattern.length; i++) {
-        let newIndex = index + pattern[i];
-        if(newIndex >= 12 ) index =0;
-        console.log(pitches[newIndex]);
+function generateScale(rootNote, pattern){
+    const rootIndex = pitches.indexOf(rootNote);
+    if (rootIndex === -1) {
+      return "Invalid root note";
     }
+  
+    const scale = [];
 
-
+    for (let i = 0; i < pattern.length; i++) {
+        scale.push(pitches[(rootIndex + pattern[i]) % 12]);
+    }
+  
+    return scale;
 }
-generateMajorTriad("F"); //F A C
 
 
+// Example usage:
+const cWholeToneScale = generateScale("C", Scales.WHOLETONE);
+console.log("C Whole-Tone Scale:", cWholeToneScale);
+  
+
+const fMajorTriad = generateScale("F", Scales.MAJORTRIAD);
+console.log("F Major Triad:", fMajorTriad);
+
+
+//TODO
 // scales + chords
 //circle of 5th and 4th
