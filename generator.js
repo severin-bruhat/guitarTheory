@@ -13,7 +13,8 @@ var pitches = [
     "G#/Ab",
 ]
 
-const Scales = {
+
+const Patterns = {
     WHOLETONE: [2, 2, 2, 2, 2, 2], //whole step
     MAJORTRIAD: [0, 4, 3], //root, major third and perfect fifth. [0, 4, 7]
     MINORTRIAD: [0, 3, 4], //root, a minor third and a perfect fifth [0, 3, 7]
@@ -35,7 +36,7 @@ function generateScale(rootNote, pattern) {
     }
 
     //hack for triads as we only want 3 notes
-    if(pattern.toString() == Scales.MAJORTRIAD.toString() || pattern.toString() == Scales.MINORTRIAD.toString())
+    if(pattern.toString() == Patterns.MAJORTRIAD.toString() || pattern.toString() == Patterns.MINORTRIAD.toString())
         return scale.slice(1);
         
     return scale;
@@ -43,25 +44,25 @@ function generateScale(rootNote, pattern) {
 
 
 // Example usage:
-// const cWholeToneScale = generateScale("C", Scales.WHOLETONE);
+// const cWholeToneScale = generateScale("C", Patterns.WHOLETONE);
 // console.log("C Whole-Tone Scale:", cWholeToneScale);
 
-// const fMajorTriad = generateScale("F", Scales.MAJORTRIAD);
+// const fMajorTriad = generateScale("F", Patterns.MAJORTRIAD);
 // console.log("F Major Triad:", fMajorTriad);
 
-// const eMinorTriad = generateScale("E", Scales.MINORTRIAD);
+// const eMinorTriad = generateScale("E", Patterns.MINORTRIAD);
 // console.log("E Minor Triad:", eMinorTriad);
 
-// const cMajorScale = generateScale("C", Scales.MAJOR);
+// const cMajorScale = generateScale("C", Patterns.MAJOR);
 // console.log("C Major Scale:", cMajorScale);
 
-// const aNaturalMinorScale = generateScale("A", Scales.MINOR);
+// const aNaturalMinorScale = generateScale("A", Patterns.MINOR);
 // console.log("A Natural Minor Scale:", aNaturalMinorScale);
 
-const cMajorTriad = generateScale("F", Scales.MAJORTRIAD);
+const cMajorTriad = generateScale("F", Patterns.MAJORTRIAD);
 console.log("C Major Triad:", cMajorTriad);
 
-const fWholeTone = generateScale("F", Scales.WHOLETONE);
+const fWholeTone = generateScale("F", Patterns.WHOLETONE);
 console.log("F Whole Tone:", fWholeTone);
 
 //TODO
