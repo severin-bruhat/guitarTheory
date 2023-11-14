@@ -1,0 +1,21 @@
+# Node.js
+node_modules/
+npm-debug.log
+
+# Build files
+dist/
+build/
+
+# Environment variables
+.env
+
+# Editor specific files
+.vscode/
+.idea/
+
+# Test results
+coverage/
+
+# Dependency lock files
+package-lock.json
+yarn.lock
