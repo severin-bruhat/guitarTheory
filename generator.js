@@ -21,6 +21,7 @@ const Patterns = {
     MAJOR: [2, 2, 1, 2, 2, 2, 1],
     MINOR: [2, 1, 2, 2, 1, 2, 2]
 }
+
 function generateScale(rootNote, pattern) {
     const rootIndex = pitches.indexOf(rootNote);
     if (rootIndex === -1) {
@@ -42,6 +43,7 @@ function generateScale(rootNote, pattern) {
     return scale;
   }
 
+  module.exports = { Patterns, generateScale };
 
 // Example usage:
 // const cWholeToneScale = generateScale("C", Patterns.WHOLETONE);
