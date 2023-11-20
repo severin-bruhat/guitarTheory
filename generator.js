@@ -45,27 +45,6 @@ function generateScale(rootNote, pattern) {
 
   module.exports = { Patterns, generateScale };
 
-// Example usage:
-// const cWholeToneScale = generateScale("C", Patterns.WHOLETONE);
-// console.log("C Whole-Tone Scale:", cWholeToneScale);
-
-// const fMajorTriad = generateScale("F", Patterns.MAJORTRIAD);
-// console.log("F Major Triad:", fMajorTriad);
-
-// const eMinorTriad = generateScale("E", Patterns.MINORTRIAD);
-// console.log("E Minor Triad:", eMinorTriad);
-
-// const cMajorScale = generateScale("C", Patterns.MAJOR);
-// console.log("C Major Scale:", cMajorScale);
-
-// const aNaturalMinorScale = generateScale("A", Patterns.MINOR);
-// console.log("A Natural Minor Scale:", aNaturalMinorScale);
-
-const cMajorTriad = generateScale("F", Patterns.MAJORTRIAD);
-console.log("C Major Triad:", cMajorTriad);
-
-const fWholeTone = generateScale("F", Patterns.WHOLETONE);
-console.log("F Whole Tone:", fWholeTone);
 
 //TODO
 // scales + chords
