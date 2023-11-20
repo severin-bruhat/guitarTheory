@@ -19,7 +19,10 @@ const Patterns = {
     MAJORTRIAD: [0, 4, 3], //root, major third and perfect fifth. [0, 4, 7]
     MINORTRIAD: [0, 3, 4], //root, a minor third and a perfect fifth [0, 3, 7]
     MAJOR: [2, 2, 1, 2, 2, 2, 1],
-    MINOR: [2, 1, 2, 2, 1, 2, 2]
+    MINOR: [2, 1, 2, 2, 1, 2, 2],
+    MAJORPENTATONIC: [2, 2, 3, 2, 3], // root, major second, major third, perfect fifth, major sixth [0, 2, 4, 7, 9]
+    MINORPENTATONIC: [3, 2, 2, 3, 2] // root, minor third, perfect fourth, perfect fifth, minor seventh [0, 3, 5, 7, 10]
+
 }
 
 function generateScale(rootNote, pattern) {

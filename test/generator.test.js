@@ -189,3 +189,127 @@ describe('Minor Scales', () => {
         expect(dMinorScale).toEqual(['D', 'E', 'F', 'G', 'A', 'A#/Bb', 'C', 'D']);
     });
 });
+
+describe('Major Pentatonic Scales', () => {
+    test('Generate C Major Pentatonic Scale', () => {
+        const cMajorPentatonicScale = generateScale("C", Patterns.MAJORPENTATONIC);
+        expect(cMajorPentatonicScale).toEqual(['C', 'D', 'E', 'G', 'A', 'C']);
+    });
+
+    test('Generate C#/Db Major Pentatonic Scale', () => {
+        const cdMajorPentatonicScale = generateScale("C#/Db", Patterns.MAJORPENTATONIC);
+        expect(cdMajorPentatonicScale).toEqual(['C#/Db', 'D#/Eb', 'F', 'G#/Ab', 'A#/Bb', 'C#/Db']);
+    });
+
+    test('Generate D Major Pentatonic Scale', () => {
+        const dMajorPentatonicScale = generateScale("D", Patterns.MAJORPENTATONIC);
+        expect(dMajorPentatonicScale).toEqual(['D', 'E', 'F#/Gb', 'A', 'B', 'D']);
+    });
+
+    test('Generate D#/Eb Major Pentatonic Scale', () => {
+        const deMajorPentatonicScale = generateScale("D#/Eb", Patterns.MAJORPENTATONIC);
+        expect(deMajorPentatonicScale).toEqual(['D#/Eb', 'F', 'G', 'A#/Bb', 'C', 'D#/Eb']);
+    });
+
+    test('Generate E Major Pentatonic Scale', () => {
+        const eMajorPentatonicScale = generateScale("E", Patterns.MAJORPENTATONIC);
+        expect(eMajorPentatonicScale).toEqual(['E', 'F#/Gb', 'G#/Ab', 'B', 'C#/Db', 'E']);
+    });
+
+    test('Generate F Major Pentatonic Scale', () => {
+        const fMajorPentatonicScale = generateScale("F", Patterns.MAJORPENTATONIC);
+        expect(fMajorPentatonicScale).toEqual(['F', 'G', 'A', 'C', 'D', 'F']);
+    });
+
+    test('Generate F#/Gb Major Pentatonic Scale', () => {
+        const fgMajorPentatonicScale = generateScale("F#/Gb", Patterns.MAJORPENTATONIC);
+        expect(fgMajorPentatonicScale).toEqual(['F#/Gb', 'G#/Ab', 'A#/Bb', 'C#/Db', 'D#/Eb', 'F#/Gb']);
+    });
+
+    test('Generate G Major Pentatonic Scale', () => {
+        const gMajorPentatonicScale = generateScale("G", Patterns.MAJORPENTATONIC);
+        expect(gMajorPentatonicScale).toEqual(['G', 'A', 'B', 'D', 'E', 'G']);
+    });
+
+    test('Generate G#/Ab Major Pentatonic Scale', () => {
+        const gaMajorPentatonicScale = generateScale("G#/Ab", Patterns.MAJORPENTATONIC);
+        expect(gaMajorPentatonicScale).toEqual(['G#/Ab', 'A#/Bb', 'C', 'D#/Eb', 'F', 'G#/Ab']);
+    });
+
+    test('Generate A Major Pentatonic Scale', () => {
+        const aMajorPentatonicScale = generateScale("A", Patterns.MAJORPENTATONIC);
+        expect(aMajorPentatonicScale).toEqual(['A', 'B', 'C#/Db', 'E', 'F#/Gb', 'A']);
+    });
+
+    test('Generate A#/Bb Major Pentatonic Scale', () => {
+        const abMajorPentatonicScale = generateScale("A#/Bb", Patterns.MAJORPENTATONIC);
+        expect(abMajorPentatonicScale).toEqual(['A#/Bb', 'C', 'D', 'F', 'G', 'A#/Bb']);
+    });
+
+    test('Generate B Major Pentatonic Scale', () => {
+        const bMajorPentatonicScale = generateScale("B", Patterns.MAJORPENTATONIC);
+        expect(bMajorPentatonicScale).toEqual(['B', 'C#/Db', 'D#/Eb', 'F#/Gb', 'G#/Ab', 'B']);
+    });
+});
+
+describe('Minor Pentatonic Scales', () => {
+    test('Generate C Minor Pentatonic Scale', () => {
+        const cMinorPentatonicScale = generateScale("C", Patterns.MINORPENTATONIC);
+        expect(cMinorPentatonicScale).toEqual(['C', 'D#/Eb', 'F', 'G', 'A#/Bb', 'C']);
+    });
+
+    test('Generate C#/Db Minor Pentatonic Scale', () => {
+        const cdMinorPentatonicScale = generateScale("C#/Db", Patterns.MINORPENTATONIC);
+        expect(cdMinorPentatonicScale).toEqual(['C#/Db', 'E', 'F#/Gb', 'G#/Ab', 'B', 'C#/Db']);
+    });
+
+    test('Generate D Minor Pentatonic Scale', () => {
+        const dMinorPentatonicScale = generateScale("D", Patterns.MINORPENTATONIC);
+        expect(dMinorPentatonicScale).toEqual(['D', 'F', 'G', 'A', 'C', 'D']);
+    });
+
+    test('Generate D#/Eb Minor Pentatonic Scale', () => {
+        const deMinorPentatonicScale = generateScale("D#/Eb", Patterns.MINORPENTATONIC);
+        expect(deMinorPentatonicScale).toEqual(['D#/Eb', 'F#/Gb', 'G#/Ab', 'A#/Bb', 'C#/Db', 'D#/Eb']);
+    });
+
+    test('Generate E Minor Pentatonic Scale', () => {
+        const eMinorPentatonicScale = generateScale("E", Patterns.MINORPENTATONIC);
+        expect(eMinorPentatonicScale).toEqual(['E', 'G', 'A', 'B', 'D', 'E']);
+    });
+
+    test('Generate F Minor Pentatonic Scale', () => {
+        const fMinorPentatonicScale = generateScale("F", Patterns.MINORPENTATONIC);
+        expect(fMinorPentatonicScale).toEqual(['F', 'G#/Ab', 'A#/Bb', 'C', 'D#/Eb', 'F']);
+    });
+
+    test('Generate F#/Gb Minor Pentatonic Scale', () => {
+        const fgMinorPentatonicScale = generateScale("F#/Gb", Patterns.MINORPENTATONIC);
+        expect(fgMinorPentatonicScale).toEqual(['F#/Gb', 'A', 'B', 'C#/Db', 'E', 'F#/Gb']);
+    });
+
+    test('Generate G Minor Pentatonic Scale', () => {
+        const gMinorPentatonicScale = generateScale("G", Patterns.MINORPENTATONIC);
+        expect(gMinorPentatonicScale).toEqual(['G', 'A#/Bb', 'C', 'D', 'F', 'G']);
+    });
+
+    test('Generate G#/Ab Minor Pentatonic Scale', () => {
+        const gaMinorPentatonicScale = generateScale("G#/Ab", Patterns.MINORPENTATONIC);
+        expect(gaMinorPentatonicScale).toEqual(['G#/Ab', 'B', 'C#/Db', 'D#/Eb', 'F#/Gb', 'G#/Ab']);
+    });
+
+    test('Generate A Minor Pentatonic Scale', () => {
+        const aMinorPentatonicScale = generateScale("A", Patterns.MINORPENTATONIC);
+        expect(aMinorPentatonicScale).toEqual(['A', 'C', 'D', 'E', 'G', 'A']);
+    });
+
+    test('Generate A#/Bb Minor Pentatonic Scale', () => {
+        const abMinorPentatonicScale = generateScale("A#/Bb", Patterns.MINORPENTATONIC);
+        expect(abMinorPentatonicScale).toEqual(['A#/Bb', 'C#/Db', 'D#/Eb', 'F', 'G#/Ab', 'A#/Bb']);
+    });
+
+    test('Generate B Minor Pentatonic Scale', () => {
+        const bMinorPentatonicScale = generateScale("B", Patterns.MINORPENTATONIC);
+        expect(bMinorPentatonicScale).toEqual(['B', 'D', 'E', 'F#/Gb', 'A', 'B']);
+    });
+});
